@@ -17,7 +17,7 @@ function main(){
 ele pega os dados enviados pela api, no looping "Data.forEach(), ele pega cada struct "livro" e mostra na tela atráves de "insertAdjacentHTML"
 */
 function getAll() {
-    fetch("http://localhost:5000/Artigos", {
+    fetch("18.224.184.9:5000/Artigos", {
     method: 'GET', headers: {
         'Accept': 'application/json',
         },
@@ -55,7 +55,7 @@ ele pega os dados especificos enviados pela api, atravez do dado escrito pelo us
 */
 function getEspecific(id) {
     
-    fetch("http://localhost:5000/Artigos/" + id, {
+    fetch("18.224.184.9:5000/Artigos/" + id, {
     method: 'GET', headers: {
         'Accept': 'application/json',
         },
@@ -110,7 +110,7 @@ function mainAdm(){
 é criado um botão "X" para delete e um botãO "Edit" para editar a struct.
 */
 function getAllAdm() {
-    fetch("http://localhost:5000/Artigos/", {
+    fetch("18.224.184.9:5000/Artigos", {
     method: 'GET', headers: {
         'Accept': 'application/json',
         },
@@ -154,7 +154,7 @@ function getAllAdm() {
 */
 function getEspecificAdm(id) {
 
-    fetch("http://localhost:5000/Artigos/" + id, {
+    fetch("18.224.184.9:5000/Artigos/" + id, {
     method: 'GET', headers: {
         'Accept': 'application/json',
         },
@@ -195,7 +195,7 @@ function getEspecificAdm(id) {
 /*está função faz a ligação com a api atravez do "fetch()", todavia é passado um id, e é setado o metodo "delete" para deletar a struct que possui o id*/
 function del(id) {
 
-    fetch("http://localhost:5000/Artigos/" + id, {
+    fetch("18.224.184.9:5000/Artigos/" + id, {
     method: 'DELETE', headers: {
         'Accept': 'application/json',
         },
@@ -250,8 +250,8 @@ function edit(id){
             'autor':  dados_editar_Artigo[2],
         }
 
-        if (confirm(`Você está editando o Artigo ${novo_Artigo.titulo}, do autor ${novo_Artigo.autor}`) == true){
-            fetch("http://localhost:5000/Artigos", {
+        if (confirm(`Você está editando um Artigo ${novo_Artigo.titulo}, do autor ${novo_Artigo.autor}`) == true){
+            fetch("18.224.184.9:5000/Artigos", {
             method: 'PUT', headers: {
             'Accept': 'application/json',
             },
@@ -288,8 +288,8 @@ function novo(){
         'autor':  dados_novo_Artigo[2],
       }
     
-    if (confirm(`Você está cadastrando o livro ${novo_Artigo.titulo}, do autor ${novo_Artigo.autor}`) == true){
-        fetch("http://localhost:5000/Artigos", {
+    if (confirm(`Você está cadastrando um Artigo ${novo_Artigo.titulo}, do autor ${novo_Artigo.autor}`) == true){
+        fetch("18.224.184.9:5000/Artigos", {
         method: 'POST', headers: {
             'Accept': 'application/json',
             },
