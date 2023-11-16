@@ -29,7 +29,7 @@ def obter_Artigos():
 @app.route('/Artigos/<id>',methods=['GET'])
 def obter_artigo_por_id(id):
     for Artigo in Artigos:
-        if Artigo.get('id') == id or Artigo.get('autor') == id or Artigo.get('título') == id:
+        if Artigo.get('id') == id or Artigo.get('autor') == id or Artigo.get('titulo') == id:
             return jsonify(Artigo)
 
 @app.route('/Artigos/<id>',methods=['PUT'])    
