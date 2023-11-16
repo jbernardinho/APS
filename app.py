@@ -26,13 +26,13 @@ Artigos = [
 def obter_Artigos():
     return jsonify(Artigos)
 
-@app.route('/Artigos/<int:id>',methods=['GET'])
+@app.route('/Artigos/<id>',methods=['GET'])
 def obter_artigo_por_id(id):
     for Artigo in Artigos:
         if Artigo.get('id') == id or Artigo.get('autor') == id or Artigo.get('título') == id:
             return jsonify(Artigo)
 
-@app.route('/Artigos/<int:id>',methods=['PUT'])    
+@app.route('/Artigos/<id>',methods=['PUT'])    
 def editar_artigo_por_id(id):
     Artigo_alterado = request.get_json()
     for indice,Artigo in enumerate(Artigos):
@@ -47,7 +47,7 @@ def incluir_novo_Artigo():
 
     return jsonify(Artigos)
 
-@app.route('/Artigos/<int:id>', methods = ['DELETE'])
+@app.route('/Artigos/<id>', methods = ['DELETE'])
 def excluir_artigos(id):
     for indice,artigo in enumerate(Artigos):
         if artigo.get('id') == id:
