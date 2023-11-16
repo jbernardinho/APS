@@ -1,7 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 
-
 app = Flask(__name__)
 CORS(app)
 
@@ -24,13 +23,13 @@ Artigos = [
 ]
 
 @app.route('/Artigos',methods=['GET'])
-def obter_arquivos():
+def obter_Artigos():
     return jsonify(Artigos)
 
 @app.route('/Artigos/<int:id>',methods=['GET'])
 def obter_artigo_por_id(id):
     for Artigo in Artigos:
-        if Artigo.get('id') == id:
+        if Artigo.get('id') == id or Artigo.get('autor') == id or Artigo.get('título') == id:
             return jsonify(Artigo)
 
 @app.route('/Artigos/<int:id>',methods=['PUT'])    
@@ -58,5 +57,3 @@ def excluir_artigos(id):
 
 
 app.run(port=5000,host='0.0.0.0',debug=True)
-
-
