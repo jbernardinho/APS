@@ -20,6 +20,42 @@ Artigos = [
             'titulo': 'GASES DE EFEITO ESTUFA E POLUIÇÃO DO AR: SEMELHANÇAS E DIFERENCIAIS', 
             'autor': 'Leandro Jose Barbosa Lima'
     },
+    {
+            'id': '4',
+            'titulo': 'MEIO AMBIENTE, A URGÊNCIA DA PROTEÇÃO E DA SUSTENTABILIDADE', 
+            'autor': 'Valéria Gonçalves Silva'
+    },
+    {
+            'id': '5',
+            'titulo': 'MEIO AMBIENTE:PRESERVAÇÃO E SUSTENTABILIDAD', 
+            'autor': 'Américo Donizete Batista'
+    },
+    {
+            'id': '6',
+            'titulo': 'UMA ABORDAGEM AOS CRIMES AMBIENTAIS NA MINERAÇÃO: ANÁLISE DA LEI 9.605/98', 
+            'autor': 'Antônio José Ribeiro Nunes'
+    },
+    {
+            'id': '7',
+            'titulo': 'MUDANÇAS CLIMÁTICAS E AGROECOLOGIA NO DESENVOLVIMENTO DO RIO GRANDE DO SUL-BRASIL', 
+            'autor': 'Iran Carlos Lovis Trentin'
+    },
+    {
+            'id': '8',
+            'titulo': 'BIOMASSA PARA PRODUÇÃO DE ENERGIA SUSTENTÁVEL', 
+            'autor': 'Marcelo Morello'
+    },
+    {
+            'id': '9',
+            'titulo': 'CRIMES CONTRA A FLORA NO RIO GRANDE DO SUL: PROPOSTA DE CHECKLIST PARA CONSTATAÇÃO', 
+            'autor': 'Ana Paula Rozado Gomes'
+    },
+    {
+            'id': '10',
+            'titulo': 'DESENVOLVIMENTO RURAL SUSTENTÁVEL NA AGRICULTURA FAMILIAR ORGÂNICA: UM ESTUDO BIBLIOMÉTRICO', 
+            'autor': 'Keitilanger Grisa Hahn' 
+    },
+    
 ]
 
 @app.route('/Artigos',methods=['GET'])
